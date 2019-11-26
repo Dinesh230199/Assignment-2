@@ -24,20 +24,34 @@
         <Input type="checkbox" >Model1<br>
           <Input type="checkbox" >Model2<br>
      <div *ngIf="CD1 && this.Assignment.controls.cb1.value === true">
+       <br>
         <input type="checkbox" formControlName="cb1" (click)="removeCD1()">Coverage 1<br>
-
-
-     </div>
-     <div *ngIf="CD2 && this.Assignment.controls.cb2.value === true">
-      <input type="checkbox" formControlName="cb2" (click)="removeCD2()">Coverage 2<br>
-      Enter Date<br><input type="date" formControlName="date"> <br>
-      Coverage Value <br> <input type="numeric" formControlName = "coverageVal"><br>
+        Enter Date<br><input type="text" placeholder = "dd/mm/yyyy" formControlName="date1"> <br>
+      Coverage Value <br> <input type="numeric" formControlName = "coverageVal1"><br>
       Is new coverage<br>
-      <input type="radio" formControlName = "newCoverage" value="new_coverage">Yes
-      <input type="radio" formControlName = "newCoverage" valye= "reneval">No
+      <input type="radio" formControlName = "newCoverage1" value="new_coverage">Yes
+      <input type="radio" formControlName = "newCoverage1" valye= "reneval">No
      </div>
+     
+
+     <div *ngIf="CD2 && this.Assignment.controls.cb2.value === true">
+       <br>
+      <input type="checkbox" formControlName="cb2" (click)="removeCD2()">Coverage 2<br>
+      Enter Date<br><input type="text" placeholder = "dd/mm/yyyy" formControlName="date2" > <br>
+      Coverage Value <br> <input type="numeric" formControlName = "coverageVal2"><br>
+      Is new coverage<br>
+      <input type="radio" formControlName = "newCoverage2" value="new_coverage">Yes
+      <input type="radio" formControlName = "newCoverage2" valye= "reneval">No
+     </div>
+
      <div *ngIf="CD3 && this.Assignment.controls.cb3.value === true">
+       <br>
       <input type="checkbox" formControlName="cb3" (click)="removeCD3()">Coverage 3<br>
+      Enter Date<br><input type="text" placeholder = "dd/mm/yyyy" formControlName="date3"> <br>
+      Coverage Value <br> <input type="numeric" formControlName = "coverageVal3"><br>
+      Is new coverage<br>
+      <input type="radio" formControlName = "newCoverage3" value="new_coverage">Yes
+      <input type="radio" formControlName = "newCoverage3" valye= "reneval">No
      </div>
    
   </div>

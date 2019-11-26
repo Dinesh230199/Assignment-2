@@ -31,10 +31,15 @@ export class AppComponent implements OnInit {
       cb1 : [''],
       cb2 : [''],
       cb3 : [''],
-      newCoverage :[''],
-      date : [''],
-      coverageVal :['',Validators.pattern("[0-9]")],
-      hello :['']
+      newCoverage1 :[''],
+      date1 : ['',Validators.pattern('[0-9]{2}/[0-9]{2}/[0-9]{4}')],
+      coverageVal1 :['',Validators.pattern("[0-9]")],
+      newCoverage2 :[''],
+      date2 : ['',Validators.pattern('[0-9]{2}/[0-9]{2}/[0-9]{4}')],
+      coverageVal2 :['',Validators.pattern("[0-9]")],
+      newCoverage3 :[''],
+      date3 : ['',Validators.pattern('[0-9]{2}/[0-9]{2}/[0-9]{4}')],
+      coverageVal3 :['',Validators.pattern("[0-9]")],
     })
 
     // if(this.Assignment.get('cb1').value === true || this.Assignment.get('cb2').value===true || this.Assignment.get('cb3').value===true){
