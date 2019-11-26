@@ -1,0 +1,32 @@
+
+
+fieldset {
+    margin: 20px;
+    padding: 0 10px 10px;
+    border: 1px solid rgb(79, 184, 226);
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgb(79, 184, 226);
+    padding-top: 10px;
+  }
+
+  a{
+    margin: 20px;
+    padding: 0 10px 10px;
+  }
+
+  .accordion {     
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;        
+}
+
+#button{
+border-bottom:1px solid rgb(79, 184, 226);
+box-shadow: 0 0 3px rgb(79, 184, 226);
+}
+
+#panel{
+    padding-top: 10px;
+}

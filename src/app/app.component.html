@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<body><form  [formGroup]="Assignment">
+  <fieldset><div id=button>
+  <button class="accordion" (click)="section['first'] = !section['first']">what is included in this quote</button></div>
+  <div class="panel" *ngIf="section['first']">
+    
+    <fieldset><div id=button>
+  <button class="accordion" (click)="section['second'] = !section['second']">Must-have</button></div>
+  <div class="panel" id="panel" *ngIf="section['second']">
+    <Input type="checkbox" >Model<br>
+      <Input type="checkbox" >Model1<br>
+        <Input type="checkbox" >Model2<br>
+    
+  </div>
+  </fieldset>
+  
+  <fieldset><div id=button>
+  <button class="accordion" (click)="section['third'] = !section['third']">Suggested Coverages</button></div>
+  <div class="panel" id="panel" *ngIf="section['third']">
+
+      <Input type="checkbox" >Model<br>
+        <Input type="checkbox" >Model1<br>
+          <Input type="checkbox" >Model2<br>
+     <div *ngIf="CD1 && this.Assignment.controls.cb1.value === true">
+        <input type="checkbox" formControlName="cb1" (click)="removeCD1()">Coverage 1<br>
+
+
+     </div>
+     <div *ngIf="CD2 && this.Assignment.controls.cb2.value === true">
+      <input type="checkbox" formControlName="cb2" (click)="removeCD2()">Coverage 2<br>
+      Enter Date<br><input type="date" formControlName="date"> <br>
+      Coverage Value <br> <input type="numeric" formControlName = "coverageVal"><br>
+      Is new coverage<br>
+      <input type="radio" formControlName = "newCoverage" value="new_coverage">Yes
+      <input type="radio" formControlName = "newCoverage" valye= "reneval">No
+     </div>
+     <div *ngIf="CD3 && this.Assignment.controls.cb3.value === true">
+      <input type="checkbox" formControlName="cb3" (click)="removeCD3()">Coverage 3<br>
+     </div>
+   
+  </div>
+  </fieldset>
+  </div>
+  </fieldset>
+  <br>
+  
+  <!-- <a href="#" (click)="open()">Additional Coverage options</a> -->
+
+
+<a href="#" (click)="openModal(template)">Additional Coverage options</a>
+ 
+<ng-template #template  >
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Add Coverages</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <input type="checkbox" formControlName="cb1">Coverage 1<br>
+    <input type="checkbox" formControlName="cb2">Coverage 2<br>
+    <input type="checkbox" formControlName="cb3">Coverage 3<br>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" [hidden]="!addbtn" (click)="coverageDetails(); modalRef.hide()">+Add</button>
+
+  </div>
+</ng-template>
+
+
+
+
+
+</form>
+<!-- <div *ngIf="CD1">Hello div 1</div> -->
+
+
+</body>
+</html>
